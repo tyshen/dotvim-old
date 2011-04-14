@@ -18,6 +18,10 @@ else
     set ruler
     syntax on
 endif
+set nocompatible
+set ruler
+syntax on
+set hls
 
 "===================================================================================================
 " vim 7 config

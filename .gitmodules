@@ -1,0 +1,24 @@
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim
+[submodule "supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "bundle/current-func-info.vim"]
+	path = bundle/current-func-info.vim
+	url = https://github.com/tyru/current-func-info.vim
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion
+[submodule "neverland-vim-theme"]
+	path = neverland-vim-theme
+	url = https://github.com/trapd00r/neverland-vim-theme
+[submodule "bundle/neverland-vim-theme"]
+	path = bundle/neverland-vim-theme
+	url = https://github.com/trapd00r/neverland-vim-theme
