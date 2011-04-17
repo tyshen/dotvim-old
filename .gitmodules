@@ -3,7 +3,7 @@
 	url = https://github.com/tpope/vim-pathogen
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim
+	url = https://github.com/tyshen/snipmate.vim
 [submodule "supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab
