@@ -42,15 +42,15 @@ function! Vimgdb()
   nmap ,g <F7>
 endfunction
 
-map <LEADER>ma <ESC>:set modifiable!<CR><ESC>:set modifiable?<CR>
+map <LEADER>mod <ESC>:set modifiable!<CR><ESC>:set modifiable?<CR>
 map rpid <ESC>:r !ppid<CR>^iat <CR>
 
 "set color number
 "default to 256 colors. This could have problem in term not support 256 colors.
 if !has("gui_running") 
     set t_Co=256
-    set t_AB=[48;5;%dm
-    set t_AF=[38;5;%dm
+    "set t_AB=[48;5;%dm
+    "set t_AF=[38;5;%dm
 endif
 
 "set color scheme 
