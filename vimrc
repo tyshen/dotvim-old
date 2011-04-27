@@ -313,8 +313,6 @@ else
   set nu
 endif
 
-"Do not redraw, when running macros.. lazyredraw
-set lz
 
 "set autoindent
 "set smartindent
@@ -656,3 +654,5 @@ map <Leader>cm <Plug>MarkClear
 " Setting it to "xterm" will enable more features.
 "let g:Conque_TERM = 'dumb'
 "
+"EasyGrep
+let g:EasyGrepMode = 2
