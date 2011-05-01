@@ -474,16 +474,6 @@ endif
 syn keyword btTF TRUE FALSE
 hi link btTF Constant
 
-"================================================================================
-"gui menu
-"================================================================================
-if has("gui_running")
-  menu Pluging.Function\ list :Tlist<CR>
-  menu Pluging.File\ Browser :NERDTreeToggle<CR>
-  menu Pluging.Buffer\ Explorer :BufExplorer<CR>
-  menu Pluging.Project\ File <F12>
-endif
-
 
 "================================================================================
 "Plugin confguration
@@ -654,5 +644,7 @@ map <Leader>cm <Plug>MarkClear
 " Setting it to "xterm" will enable more features.
 "let g:Conque_TERM = 'dumb'
 "
+"Easymotion
+let g:EasyMotion_leader_key='.'
 "EasyGrep
 let g:EasyGrepMode = 2
