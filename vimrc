@@ -245,7 +245,7 @@ command Lxrtag call Lxr()
 "set virtualedit=all
 
 set nowrap
-map <LEADER>w <ESC>:set wrap!<cr><ESC>:set wrap?<cr>
+map <LEADER>wr <ESC>:set wrap!<cr><ESC>:set wrap?<cr>
 
 "swap paste mode
 map <LEADER>pa <ESC>:set paste!<cr><ESC>:set paste?<cr>
@@ -351,8 +351,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 "disable search light
-map ,l :nohls<CR>
-map ,h :set hls!<CR>
+map ,l :set hls!<CR>
 "toggle line number
 map <leader>n <ESC>:set nu!<CR>
 
