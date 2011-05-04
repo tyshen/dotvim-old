@@ -351,7 +351,7 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 "disable search light
-map ,l :set hls!<CR>
+map ,l :nohls<CR>
 "toggle line number
 map <leader>n <ESC>:set nu!<CR>
 
