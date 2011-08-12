@@ -1,5 +1,4 @@
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
 
 runtime macros/matchit.vim
 "copy from /etc/vimrc for some common setting
