@@ -353,6 +353,8 @@ map <C-l> <C-W>l
 map ,l :nohls<CR>
 "toggle line number
 map <leader>n <ESC>:set nu!<CR>
+"sudo write
+command Sudow w !sudo tee % > /dev/null
 
 "just reference
 "Fast modify in equation Ex.(a=b)
