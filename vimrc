@@ -41,7 +41,7 @@ function! Vimgdb()
   nmap ,g <F7>
 endfunction
 
-map <LEADER>mod <ESC>:set modifiable!<CR><ESC>:set modifiable?<CR>
+map <LEADER>e <ESC>:set modifiable!<CR><ESC>:set modifiable?<CR>
 map rpid <ESC>:r !ppid<CR>^iat <CR>
 
 "set color number
@@ -244,7 +244,7 @@ command Lxrtag call Lxr()
 "set virtualedit=all
 
 set nowrap
-map <LEADER>wr <ESC>:set wrap!<cr><ESC>:set wrap?<cr>
+map <LEADER>w <ESC>:set wrap!<cr><ESC>:set wrap?<cr>
 
 "swap paste mode
 map <LEADER>pa <ESC>:set paste!<cr><ESC>:set paste?<cr>
@@ -424,7 +424,7 @@ if v:version < 700
     "nnoremap <leader>q :QFix<CR>
 else
     "QFixToggle fail when quickfix will open automatically
-    nnoremap <leader>q :call QFixSwitch()<CR>
+    nnoremap qq :call QFixSwitch()<CR>
 
     "QFixSwitch can be done by change g:qfix_win of QFixToggle to t:qfix_win.
     "Still keep for memo
