@@ -31,3 +31,18 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "bundle/ShowMarks"]
+	path = bundle/ShowMarks
+	url = https://github.com/vim-scripts/ShowMarks.git
+[submodule "bundle/OmniCppComplete"]
+	path = bundle/OmniCppComplete
+	url = https://github.com/vim-scripts/OmniCppComplete.git
+[submodule "bundle/VisIncr"]
+	path = bundle/VisIncr
+	url = https://github.com/vim-scripts/VisIncr.git
+[submodule "bundle/QuickBuf"]
+	path = bundle/QuickBuf
+	url = https://github.com/vim-scripts/QuickBuf.git
+[submodule "bundle/qnamebuf"]
+	path = bundle/qnamebuf
+	url = https://github.com/tyshen/qnamebuf.git
