@@ -72,7 +72,7 @@ endif
 
 "set highit cursor line
 set cursorline
-hi cursorline cterm=bold ctermbg=238 guibg=darkgreen
+hi cursorline cterm=bold ctermbg=235 guibg=darkgreen
 hi TabLineSel cterm=bold ctermbg=4
 
 if has("gui_running")
@@ -514,6 +514,11 @@ let g:qb_hotkey = ",,"
 "================================================================================
 "qnamebuf
 let g:qnamebuf_hotkey= ",." 
+
+"command-t
+nmap <silent> ,f :CommandT<CR>
+nmap <silent> ,b :CommandTBuffer<CR>
+command -nargs=* Ct :CommandT <args>
 
 "================================================================================
 "setting for tabber plugin not used now
