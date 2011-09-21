@@ -46,3 +46,6 @@
 [submodule "bundle/qnamebuf"]
 	path = bundle/qnamebuf
 	url = https://github.com/tyshen/qnamebuf.git
+[submodule "bundle/EasyGrep"]
+	path = bundle/EasyGrep
+	url = https://github.com/vim-scripts/EasyGrep.git
