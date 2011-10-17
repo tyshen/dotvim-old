@@ -58,3 +58,6 @@
 [submodule "bundle/xptemplate"]
 	path = bundle/xptemplate
 	url = git://github.com/drmingdrmer/xptemplate.git
+[submodule "bundle/rainbow_parentheses.vim"]
+	path = bundle/rainbow_parentheses.vim
+	url = https://github.com/kien/rainbow_parentheses.vim.git
