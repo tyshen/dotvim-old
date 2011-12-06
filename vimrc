@@ -652,3 +652,6 @@ map <Leader>cm <Plug>MarkClear
 let g:EasyMotion_leader_key='.'
 "EasyGrep
 let g:EasyGrepMode = 2
+
+"arpeggio
+call arpeggio#map('i', '', 0, 'jk', '<Esc>')
