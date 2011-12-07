@@ -1,5 +1,4 @@
 call pathogen#infect()
-
 runtime macros/matchit.vim
 "copy from /etc/vimrc for some common setting
 if has("unix")
@@ -65,8 +64,8 @@ else
     "colorscheme desertEx 
     "colorscheme mywombat256
     "colorscheme deveiate 
-    "colorscheme inkpot 
-    colorscheme twilight256
+    colorscheme inkpot 
+    "colorscheme twilight256
   endif
 endif
 
@@ -306,11 +305,11 @@ set hid
 "set showmatch
 
 "show line no
-if v:version >=703
-  set rnu
-else
+"if v:version >=703
+"  set rnu
+"else
   set nu
-endif
+"endif
 
 
 "set autoindent
@@ -504,8 +503,8 @@ let g:explUseSeparators=1
 
 "================================================================================
 "open buffer explorer
-nmap <F9> :BufExplorer<CR>
-map ,b <ESC>:BufExplorer<CR>
+"nmap <F9> :BufExplorer<CR>
+"map ,b <ESC>:BufExplorer<CR>
 
 "================================================================================
 "QuickBuf
@@ -513,12 +512,25 @@ let g:qb_hotkey = ",,"
 
 "================================================================================
 "qnamebuf
-let g:qnamebuf_hotkey= ",." 
+let g:qnamebuf_hotkey=",." 
+"let g:qnamefile_hotkey=",m"
 
 "command-t
-nmap <silent> ,f :CommandT<CR>
-nmap <silent> ,b :CommandTBuffer<CR>
+"nmap <silent> ,f :CommandT<CR>
+"nmap <silent> ,b :CommandTBuffer<CR>
 command -nargs=* Ct :CommandT <args>
+set wig+=*.o,*/CVS/*,*.bak,cron.*,*.a,*/inc/*,*/lib/*,*/.git/*,*/.hg/*,*/.svn/*,*.lib++,*.swp
+
+"ctrlp.vim
+let g:ctrlp_by_filename = 0
+let g:ctrlp_map = ',f'
+let g:ctrlp_jump_to_buffer = 2
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_mruf_include = '\.cpp$\|\.h$'
+let g:ctrlp_max_depth = 40
+let g:ctrlp_extensions = ['dir']
+nmap <silent> ,b :CtrlPBuffer<CR>
 
 "================================================================================
 "setting for tabber plugin not used now
@@ -576,11 +588,11 @@ endif
 "================================================================================
 "setting for VisualMakr
 "set color again. Because color setting was erase usually by colorscheme
-if &bg == "dark"
- highlight SignColor ctermfg=white ctermbg=blue guifg=white guibg=RoyalBlue3
-else
- highlight SignColor ctermbg=white ctermfg=blue guibg=grey guifg=RoyalBlue3
-endif
+"if &bg == "dark"
+" highlight SignColor ctermfg=white ctermbg=blue guifg=white guibg=RoyalBlue3
+"else
+" highlight SignColor ctermbg=white ctermfg=blue guibg=grey guifg=RoyalBlue3
+"endif
 
 "================================================================================
 "setting for winmanager wks plugin
@@ -608,7 +620,7 @@ let g:sienna_style = 'dark' " dark or light
 "CSApprox
 "disable plugin only enable when need. Enable CSApprox by comment option 
 "CSApprox work not well in screen
-let g:CSApprox_loaded = 1
+"let g:CSApprox_loaded = 1
 
 "python.vim alternate python syntax
 let python_highlight_all= 1
@@ -653,8 +665,26 @@ let g:EasyMotion_leader_key='.'
 "EasyGrep
 let g:EasyGrepMode = 2
 
-"arpeggio
-call arpeggio#map('i', '', 0, 'jk', '<Esc>')
+"ranbow 
+command Rainbow call rainbow_parentheses#activate()|call rainbow_parentheses#load('(',')')|call rainbow_parentheses#load('{','}')
+let g:rbpt_colorpairs = [
+			\ ['brown',       'RoyalBlue3'],
+			\ ['Darkblue',    'SeaGreen3'],
+			\ ['darkgreen',   'firebrick3'],
+			\ ['darkcyan',    'RoyalBlue3'],
+			\ ['darkred',     'SeaGreen3'],
+			\ ['darkmagenta', 'DarkOrchid3'],
+			\ ['brown',       'firebrick3'],
+			\ ['yellow',      'yellow'],
+			\ ['Darkblue',    'firebrick3'],
+			\ ['darkgreen',   'RoyalBlue3'],
+			\ ['darkcyan',    'SeaGreen3'],
+			\ ['darkred',     'DarkOrchid3'],
+			\ ['red',         'firebrick3'],
+			\ ]
+
+"Arpeggio
+call arpeggio#map('i', '', 0, 'jk','<esc>')
 
 "errormarker
 let g:errormarker_disablemappings = 1

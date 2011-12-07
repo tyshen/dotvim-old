@@ -73,3 +73,6 @@
 [submodule "bundle/errormarker.vim"]
 	path = bundle/errormarker.vim
 	url = https://github.com/vim-scripts/errormarker.vim.git
+[submodule "bundle/vim-desert-warm-256"]
+	path = bundle/vim-desert-warm-256
+	url = https://github.com/rainux/vim-desert-warm-256.git

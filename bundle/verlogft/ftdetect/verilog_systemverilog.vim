@@ -10,5 +10,5 @@ if exists("b:did_ftplugin")
 endif
 
 
-au BufRead,BufNewFile *.v,*.vh,*.sv,*.vs		set filetype=verilog_systemverilog
+au BufRead,BufNewFile *.v,*.vh,*.sv,*.vs		set filetype=verilog
 
