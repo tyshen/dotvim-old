@@ -655,3 +655,6 @@ let g:EasyGrepMode = 2
 
 "arpeggio
 call arpeggio#map('i', '', 0, 'jk', '<Esc>')
+
+"errormarker
+let g:errormarker_disablemappings = 1
