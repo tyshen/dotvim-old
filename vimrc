@@ -66,6 +66,7 @@ else
     "colorscheme deveiate 
     colorscheme inkpot 
     "colorscheme twilight256
+    "colorscheme  desert-warm-256
   endif
 endif
 
@@ -308,7 +309,7 @@ set hid
 "if v:version >=703
 "  set rnu
 "else
-  set nu
+"  set nu
 "endif
 
 
@@ -519,10 +520,10 @@ let g:qnamebuf_hotkey=",."
 "nmap <silent> ,f :CommandT<CR>
 "nmap <silent> ,b :CommandTBuffer<CR>
 command -nargs=* Ct :CommandT <args>
-set wig+=*.o,*/CVS/*,*.bak,cron.*,*.a,*/inc/*,*/lib/*,*/.git/*,*/.hg/*,*/.svn/*,*.lib++,*.swp
+"set wig+=*.o,*/CVS/*,*.bak,cron.*,*.a,*/inc/*,*/lib/*,*/.git/*,*/.hg/*,*/.svn/*,*.lib++,*.swp
 
 "ctrlp.vim
-let g:ctrlp_by_filename = 0
+let g:ctrlp_by_filename = 1
 let g:ctrlp_map = ',f'
 let g:ctrlp_jump_to_buffer = 2
 let g:ctrlp_working_path_mode = 0
@@ -530,7 +531,9 @@ let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_mruf_include = '\.cpp$\|\.h$'
 let g:ctrlp_max_depth = 40
 let g:ctrlp_extensions = ['dir']
-nmap <silent> ,b :CtrlPBuffer<CR>
+"let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
+let g:ctrlp_custom_ignore = '(\.o\|\.moc\.cpp\|\.a\|\.bak\|\.swp)$'
+nmap <silent> ,m :CtrlPBuffer<CR>
 
 "================================================================================
 "setting for tabber plugin not used now
@@ -630,6 +633,7 @@ map <F10> :NERDTreeToggle<cr>
 map ,n <ESC>:NERDTreeToggle<cr>
 let g:NERDTreeIgnore = ['\~$','\.o$','\.moc.cpp$','_bf_ckcancel$','^CVS$']
 let g:NERDTreeWinSize = 20
+let g:NERDTreeDirArrows=0
 
 "SuperTab
 "let g:SuperTabMappingForward = '<c-tab>'
