@@ -1,4 +1,5 @@
 set rtp+=~/.vim/bundle/vim-pathogen
+let g:pathogen_disabled = ['zencoding-vim', 'vim-indent-guides', 'qnamebuf', 'command-t', 'xptemplate', 'vim-powerline']
 call pathogen#infect()
 runtime macros/matchit.vim
 "copy from /etc/vimrc for some common setting
@@ -59,15 +60,15 @@ else
   if(&t_Co == 8) 
     colorscheme desertEx
   else
-    set background=dark "for peaksea color scheme
+    "set background=dark "for peaksea color scheme
     "colorscheme mywombat256
     "colorscheme desert256
+    "colorscheme twilight256
+    "colorscheme desert-warm-256
+    "colorscheme 256-grayvim
     "colorscheme desertEx 
-    "colorscheme mywombat256
     "colorscheme deveiate 
     colorscheme inkpot 
-    "colorscheme twilight256
-    "colorscheme  desert-warm-256
   endif
 endif
 
@@ -321,6 +322,7 @@ set hid
 set incsearch
 "ignore caes when search
 set ignorecase
+"set smartcase "cause auto complete case sensitive too
 map <LEADER>ic <ESC>:set ignorecase!<CR><ESC>:set ignorecase?<CR>
 
 "special characters that can be used in search patterns.
@@ -514,11 +516,12 @@ let g:qb_hotkey = ",,"
 
 "================================================================================
 "qnamebuf
-let g:qnamebuf_hotkey=",." 
+"let g:qnamebuf_hotkey=",."
 "let g:qnamefile_hotkey=",m"
 
 "command-t
 "nmap <silent> ,f :CommandT<CR>
+"nmap <silent> ,m :CommandTBuffer<CR>
 "nmap <silent> ,b :CommandTBuffer<CR>
 command -nargs=* Ct :CommandT <args>
 "set wig+=*.o,*/CVS/*,*.bak,cron.*,*.a,*/inc/*,*/lib/*,*/.git/*,*/.hg/*,*/.svn/*,*.lib++,*.swp
@@ -533,7 +536,7 @@ let g:ctrlp_mruf_include = '\.cpp$\|\.h$'
 let g:ctrlp_max_depth = 40
 let g:ctrlp_extensions = ['dir']
 "let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
-let g:ctrlp_custom_ignore = '(\.o\|\.moc\.cpp\|\.a\|\.bak\|\.swp\|CVS\|\.git)$'
+let g:ctrlp_custom_ignore = '\(\.o\|\.moc\.cpp\|\.a\|\.bak\|\.swp\|CVS\|\.git\|\.lib++\)$\|/inc/\|/lib/\|/GEMINIDB/'
 nmap <silent> ,m :CtrlPBuffer<CR>
 
 "================================================================================
@@ -693,3 +696,5 @@ call arpeggio#map('i', '', 0, 'jk','<esc>')
 
 "errormarker
 let g:errormarker_disablemappings = 1
+
+"set laststatus=2 " Always show the statusline

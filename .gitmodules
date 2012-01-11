@@ -79,3 +79,12 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/ctags_cache"]
+	path = bundle/ctags_cache
+	url = https://github.com/abadcafe/ctags_cache.git
+[submodule "bundle/tabman.vim"]
+	path = bundle/tabman.vim
+	url = https://github.com/kien/tabman.vim.git
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
