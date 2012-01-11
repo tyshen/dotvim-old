@@ -1,3 +1,4 @@
+set rtp+=~/.vim/bundle/vim-pathogen
 call pathogen#infect()
 runtime macros/matchit.vim
 "copy from /etc/vimrc for some common setting
@@ -226,18 +227,18 @@ command Qttag :set tags+=~/util/tagfile/qttags
 command Debtag :set tags+=~/util/tagfile/debtags
 command Pltag :set tags+=~/util/tagfile/pltags${branch}
 "command Plalltag :set tags+=~/util/tagfile/plalltags
-function Alltags()
-    set tags+=~/util/tagfile/bttags
-    set tags+=~/util/tagfile/qttags
-    set tags+=~/util/tagfile/pltags
-endfunction
-command Atag call Alltags()
 command Csadd :cs add ~/util/tagfile/plcscope ~/LINUX/fle2
 function Lxr()
     set cscopeprg=lxrtag
     cs add ~/util/tagfile/qttags
 endfunction
 command Lxrtag call Lxr()
+function Alltags()
+    set tags+=~/util/tagfile/bttags
+    set tags+=~/util/tagfile/qttags
+    call Lxr()
+endfunction
+command Atag call Alltags()
 "set cspc=2
 
 "setting for virtual edit 
@@ -532,7 +533,7 @@ let g:ctrlp_mruf_include = '\.cpp$\|\.h$'
 let g:ctrlp_max_depth = 40
 let g:ctrlp_extensions = ['dir']
 "let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
-let g:ctrlp_custom_ignore = '(\.o\|\.moc\.cpp\|\.a\|\.bak\|\.swp)$'
+let g:ctrlp_custom_ignore = '(\.o\|\.moc\.cpp\|\.a\|\.bak\|\.swp\|CVS\|\.git)$'
 nmap <silent> ,m :CtrlPBuffer<CR>
 
 "================================================================================
