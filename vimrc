@@ -28,23 +28,7 @@ set hls
 "===================================================================================================
 if v:version >= 700
 
-"vimgdb setting
-"map <LEADER>g :call Vimgdb()<cr>
-"map to start vimgdb and vimgdb will remap F7 to toggle key map
-"ease to use cmd when in debug mode
-map ,g :call Vimgdb()<cr>
-function! Vimgdb()
-  set previewheight=12
-  run macros/gdb_mappings.vim
-  set asm=0
-  set gdbprg=gdb\ --se=testinstr
-  call gdb(" ")
-  nmap ,g <F7>
-endfunction
-
 map <LEADER>e <ESC>:set modifiable!<CR><ESC>:set modifiable?<CR>
-map rpid <ESC>:r !ppid<CR>^iat <CR>
-
 "set color number
 "default to 256 colors. This could have problem in term not support 256 colors.
 if !has("gui_running") 
