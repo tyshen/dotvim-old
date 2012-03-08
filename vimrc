@@ -295,7 +295,7 @@ set hid
 "if v:version >=703
 "  set rnu
 "else
-"  set nu
+  set nu
 "endif
 
 
@@ -507,7 +507,7 @@ let g:qb_hotkey = ",,"
 "nmap <silent> ,f :CommandT<CR>
 "nmap <silent> ,m :CommandTBuffer<CR>
 "nmap <silent> ,b :CommandTBuffer<CR>
-command -nargs=* Ct :CommandT <args>
+"command -nargs=* Ct :CommandT <args>
 "set wig+=*.o,*/CVS/*,*.bak,cron.*,*.a,*/inc/*,*/lib/*,*/.git/*,*/.hg/*,*/.svn/*,*.lib++,*.swp
 
 "ctrlp.vim
@@ -522,6 +522,8 @@ let g:ctrlp_extensions = ['dir']
 "let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
 let g:ctrlp_custom_ignore = '\(\.o\|\.moc\.cpp\|\.a\|\.bak\|\.swp\|CVS\|\.git\|\.lib++\)$\|/inc/\|/lib/\|/GEMINIDB/'
 nmap <silent> ,m :CtrlPBuffer<CR>
+nmap <silent> ,or :CtrlP $PROD_ROOT/protoProd/src/rp<CR>
+nmap <silent> ,om :CtrlP $PROD_ROOT/protoProd/src/hdlmod<CR>
 
 "================================================================================
 "setting for tabber plugin not used now
