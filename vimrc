@@ -520,7 +520,7 @@ let g:ctrlp_mruf_include = '\.cpp$\|\.h$'
 let g:ctrlp_max_depth = 40
 let g:ctrlp_extensions = ['dir']
 "let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files']
-let g:ctrlp_custom_ignore = '\(\.o\|\.moc\.cpp\|\.a\|\.bak\|\.swp\|CVS\|\.git\|\.lib++\)$\|/inc/\|/lib/\|/GEMINIDB/'
+let g:ctrlp_custom_ignore = '\(\.o\|\.moc\.cpp\|\.a\|\.bak\|\.swp\|CVS\|\.git\|\.hg\|\.lib++\)$\|/inc/\|/lib/\|/GEMINIDB/'
 nmap <silent> ,m :CtrlPBuffer<CR>
 nmap <silent> ,or :CtrlP $PROD_ROOT/protoProd/src/rp<CR>
 nmap <silent> ,om :CtrlP $PROD_ROOT/protoProd/src/hdlmod<CR>
