@@ -1,5 +1,13 @@
 set rtp+=~/.vim/bundle/vim-pathogen
-let g:pathogen_disabled = ['zencoding-vim', 'vim-indent-guides', 'qnamebuf', 'command-t', 'xptemplate', 'vim-powerline']
+let g:pathogen_disabled = [
+            \ 'zencoding-vim',
+            \ 'vim-indent-guides',
+            \ 'qnamebuf',
+            \ 'command-t',
+            \ 'snipmate',
+            \ 'vim-powerline',
+            \ 'ultisnips'
+            \ ]
 call pathogen#infect()
 runtime macros/matchit.vim
 "copy from /etc/vimrc for some common setting
@@ -207,11 +215,6 @@ endif
 if filereadable("tags")
   set tags+=./tags
 endif
-command Bttag :set tags+=~/util/tagfile/bttags
-command Qttag :set tags+=~/util/tagfile/qttags
-command Debtag :set tags+=~/util/tagfile/debtags
-command Pltag :set tags+=~/util/tagfile/pltags${branch}
-"command Plalltag :set tags+=~/util/tagfile/plalltags
 command Csadd :cs add ~/util/tagfile/plcscope ~/LINUX/fle2
 function Lxr()
     set cscopeprg=lxrtag
